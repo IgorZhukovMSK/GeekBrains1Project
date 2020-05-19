@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
+        doTask4 ();
     }
 
     public static void doTask1(int[] arr) {
@@ -43,15 +44,19 @@ public class Main {
 
     public static void doTask4() {
 
-        int[][] arr = new int[3][3];
+        int[][] arr = new int[5][5];
+        int temp = arr.length;
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
+            for (int j = 0; j < arr[i].length ; j++) {
 /*          Изначально было придумано вот такое решение.
             num[0][2] = 1;
             num[2][0] = 1;
 
  */
-                if (i == j || i == 0 && j < arr.length - 1 || i == arr.length - 1 && j == 0) {  // не уверен, что правильное решение, прошу прокомментировать, т.к. при массииве 5Х5, уже не работает.
+                if (i == j) {  // не уверен, что правильное решение, прошу прокомментировать, т.к. при массииве 5Х5, уже не работает.
+                    arr[i][j] = 1;
+                }
+                if (i != j && temp - 1 == j + i){
                     arr[i][j] = 1;
                 }
             }
