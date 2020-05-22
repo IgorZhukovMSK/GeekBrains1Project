@@ -44,7 +44,7 @@ public class Main {
                 drawField(field);
             }
             //TODO Проверка на ничью
-        } while(!isWin);
+        } while (!isWin);
 
         System.out.println(String.format("Congrats!!! You are winner Mr. %s", currentPlayerName));
 
@@ -81,14 +81,14 @@ public class Main {
 
     static boolean checkVerticalWin(char[][] field, char currentPlayerSing) {
         // TODO Улучшить до цикла
-        if (field[0][0] == currentPlayerSing && field[1][0] == currentPlayerSing && field[2][0] == currentPlayerSing) {
-            return true;
-        }
-        if (field[0][1] == currentPlayerSing && field[1][1] == currentPlayerSing && field[2][1] == currentPlayerSing) {
-            return true;
-        }
-        if (field[0][2] == currentPlayerSing && field[1][2] == currentPlayerSing && field[2][2] == currentPlayerSing) {
-            return true;
+
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field.length; j++) {
+
+                if (field[0][j] == currentPlayerSing && field[1][j] == currentPlayerSing && field[2][j] == currentPlayerSing) {
+                    return true;
+                }
+            }
         }
         return false;
     }
