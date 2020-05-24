@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 public class Main {
 
+    private static int temp = 0;
+    private static int checkVerticalWinTemp;
+    private static int checkHorizontalWinTemp;
+
     /**
      * Tic Tac Toe
      * <p>
@@ -63,9 +67,11 @@ public class Main {
 
     static boolean checkWin(char[][] field, char currentPlayerSign) {
         if (checkHorizontalWin(field, currentPlayerSign)) {
+            System.out.println("Horizont");
             return true;
         }
         if (checkVerticalWin(field, currentPlayerSign)) {
+            System.out.println("Vert");
             return true;
         }
         //TODO Diagonal
@@ -76,31 +82,33 @@ public class Main {
     }
 
     static boolean checkHorizontalWin(char[][] field, char currentPlayerSing) {
-        int temp = 0;
 
         for (int i = 0; i < field.length; i++) {
 
-            if (field[i][i] == currentPlayerSing) ;
-        temp += 1;
-            if (temp == 3);
+            if (field[i][i] == currentPlayerSing && currentPlayerSing == 'X') {
+                checkHorizontalWinTemp += 1;                            // по чему то не правильно считает (((
+            }
         }
-
-
+        if (checkHorizontalWinTemp == 3) {
+            return true;
+        }
         return false;
     }
+
 
     static boolean checkVerticalWin(char[][] field, char currentPlayerSing) {
         // TODO Улучшить до цикла
 
-        int temp = 0;
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field.length; j++) {
-                if (field[j][j] == currentPlayerSing) ;
-                temp += 1;
+                if (field[i][j] == currentPlayerSing  && currentPlayerSing == 'X') {
+                    checkVerticalWinTemp += 1;
+                }
             }
         }
-            if (temp == 3);
-
+        if (checkVerticalWinTemp == 3) {
+            return true;
+        }
         return false;
     }
 
@@ -122,8 +130,8 @@ public class Main {
 
 
         }
-      //  if (checkDiagonalWinTemp == numberOfFields);
-        if (temp == 3);
+        //  if (checkDiagonalWinTemp == numberOfFields);
+        if (temp == 3) ;
 
 //                if ((field[0][i] == currentPlayerSing && field[1][i] == currentPlayerSing && field[2][i] == currentPlayerSing) ||
 //                (field[i][2] == currentPlayerSing && field[i][1] == currentPlayerSing && field[i][0] == currentPlayerSing)) {
