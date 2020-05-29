@@ -5,7 +5,8 @@ public class Dog extends Animal {
     private static int numb;
 
     public Dog(String name) {
-        this.name = name;
+        this.setName(name);
+
     }
 
     public static int counter() {
@@ -16,27 +17,27 @@ public class Dog extends Animal {
     @Override
     public void run(int run) {
         if (run <= 500) {
-            System.out.println(this.name + " пробежал " + run + " м.");
+            System.out.println(String.format("%s пробежал %d м.", this.getName(), run));
         } else {
-            System.out.println(this.name + " не может пробежать " + run + " м.");
+            System.out.println(String.format("%s не может пробежать %d м.", this.getName(), run));
         }
     }
 
     @Override
     public void swim(int swim) {
         if (swim <= 10) {
-            System.out.println(this.name + " проплыл " + swim + " м.");
+            System.out.println(String.format("%s проплыл %d м.", this.getName(), swim));
         } else {
-            System.out.println(this.name + " не может проплыть " + swim + " м.");
+            System.out.println(String.format("%s не может проплыть %d м.", this.getName(), swim));
         }
     }
 
     @Override
     public void jump(double jump) {
         if (jump <= 0.5) {
-            System.out.println(this.name + " проплыл " + jump + " м.");
+            System.out.println(String.format("%s прыгнул на %d м.", this.getName(), jump));
         } else {
-            System.out.println(this.name + " не может проплыть " + jump + " м.");
+            System.out.println(String.format("%s не может прыгнуть на %d м.", this.getName(), jump));
         }
     }
 }

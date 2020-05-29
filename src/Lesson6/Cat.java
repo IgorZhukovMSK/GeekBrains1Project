@@ -5,7 +5,7 @@ public class Cat extends Animal {
     private static int numb;
 
     public Cat(String name) {
-        this.name = name;
+        this.setName(name);
     }
 
     public static int counter() {
@@ -16,23 +16,23 @@ public class Cat extends Animal {
     @Override
     public void run(int run) {
         if (run <= 200) {
-            System.out.println(this.name + " пробежал " + run + " м.");
+            System.out.println(String.format("%s пробежал %d м.", this.getName(), run));
         } else {
-            System.out.println(this.name + " не может пробежать " + run + " м.");
+            System.out.println(String.format("%s не может пробежать %d м.", this.getName(), run));
         }
     }
 
     @Override
     public void swim(int swim) {
-        System.out.println("Кот " + this.name + " не умеет плавать");
+        System.out.println(String.format ("Кот %s не умеет плавать",this.getName()));
     }
 
     @Override
     public void jump (double jump){
         if (jump <= 2) {
-            System.out.println(this.name + " прыгнул на " + jump + " м.");
+            System.out.println(String.format("%s прыгнул на %d м.", this.getName(), jump));
         } else {
-            System.out.println(this.name + " не может прыгнуть на " + jump + " м.");
+            System.out.println(String.format("%s не может прыгнуть на %d м.", this.getName(), jump));
         }
     }
 
