@@ -1,7 +1,5 @@
 package Lesson6;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Dog extends Animal {
 
     private static int numb;
@@ -15,7 +13,7 @@ public class Dog extends Animal {
         return numb;
     }
 
-     @Override
+    @Override
     public void run(int run) {
         if (run <= 500) {
             System.out.println(this.name + " пробежал " + run + " м.");
@@ -30,6 +28,15 @@ public class Dog extends Animal {
             System.out.println(this.name + " проплыл " + swim + " м.");
         } else {
             System.out.println(this.name + " не может проплыть " + swim + " м.");
+        }
+    }
+
+    @Override
+    public void jump(double jump) {
+        if (jump <= 0.5) {
+            System.out.println(this.name + " проплыл " + jump + " м.");
+        } else {
+            System.out.println(this.name + " не может проплыть " + jump + " м.");
         }
     }
 }

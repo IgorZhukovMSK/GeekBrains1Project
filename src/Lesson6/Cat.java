@@ -20,13 +20,22 @@ public class Cat extends Animal {
         } else {
             System.out.println(this.name + " не может пробежать " + run + " м.");
         }
-
     }
 
     @Override
     public void swim(int swim) {
         System.out.println("Кот " + this.name + " не умеет плавать");
     }
+
+    @Override
+    public void jump (double jump){
+        if (jump <= 2) {
+            System.out.println(this.name + " прыгнул на " + jump + " м.");
+        } else {
+            System.out.println(this.name + " не может прыгнуть на " + jump + " м.");
+        }
+    }
+
 
 }
 

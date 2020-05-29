@@ -20,5 +20,9 @@ public class Animal extends Amount {
 
     }
 
+    public void jump (double jump){
+        System.out.println(this.name + " прыгнул на " + jump + " м.");
+    }
+
 }
 
