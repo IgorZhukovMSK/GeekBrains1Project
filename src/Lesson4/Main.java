@@ -7,7 +7,7 @@ public class Main {
 
     private static int temp = 0;
     private static int checkVerticalWinTemp;
-    private static int checkHorizontalWinTemp;
+//    private static int checkHorizontalWinTemp = 0;
 
     /**
      * Tic Tac Toe
@@ -82,16 +82,24 @@ public class Main {
     }
 
     static boolean checkHorizontalWin(char[][] field, char currentPlayerSing) {
-
+        int checkHorizontalWinTemp = 0;
+        int temp1 = 0;
         for (int i = 0; i < field.length; i++) {
-
-            if (field[i][i] == currentPlayerSing && currentPlayerSing == 'X') {
-                checkHorizontalWinTemp += 1;                            // по чему то не правильно считает (((
+              temp1 = 0;
+            for (int j = 0; j <field[i].length; j++) {
+                if (field[i][j] == currentPlayerSing) {
+                   temp1 = temp1 + 1;
+                    checkHorizontalWinTemp += 1;                            // по чему то не правильно считает (((
+                }
             }
         }
-        if (checkHorizontalWinTemp == 3) {
-            return true;
+        System.out.println(checkHorizontalWinTemp);
+//        if (checkHorizontalWinTemp == 6);
+        if (temp1 == 3)
+        {
+            //return true;
         }
+
         return false;
     }
 
@@ -106,9 +114,9 @@ public class Main {
                 }
             }
         }
-        if (checkVerticalWinTemp == 3) {
-            return true;
-        }
+//        if (checkVerticalWinTemp == 3) {                   // должно на каждую вертикаль +1 считать, а не в общем.
+//            return true;
+//        }
         return false;
     }
 
