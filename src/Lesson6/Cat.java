@@ -1,9 +1,7 @@
 package Lesson6;
 
 public class Cat extends Animal {
-
     private static int numb;
-
     public Cat(String name) {
         this.setName(name);
     }
@@ -32,7 +30,7 @@ public class Cat extends Animal {
         if (jump <= 2) {
             System.out.println(String.format("%s прыгнул на %d м.", this.getName(), jump));
         } else {
-            System.out.println(String.format("%s не может прыгнуть на %d м.", this.getName(), jump));
+            System.out.println(String.format("%s не может прыгнуть на %s м.", this.getName(), jump));
         }
     }
 

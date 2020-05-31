@@ -1,7 +1,7 @@
 package Lesson6;
 
 public class Amount{
-    private static int numb;
+    protected static int numb;
 
     public Amount() {
         numb++;
