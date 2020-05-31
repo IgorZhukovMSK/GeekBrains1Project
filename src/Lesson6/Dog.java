@@ -1,13 +1,13 @@
 package Lesson6;
 
-public class Dog extends Animal {
+public class Dog extends WaterfowlAnimal {
     private static int numb;
     public Dog(String name) {
         this.setName(name);
 
     }
 
-    public static int counter() {
+        public static int counter() {
         numb++;
         return numb;
     }

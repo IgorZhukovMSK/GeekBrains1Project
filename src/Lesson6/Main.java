@@ -7,8 +7,13 @@ public class Main {
         Cat cat = new Cat("Барсик");
         System.out.println(cat.getName());
         cat.run(15);
-        cat.swim(10);
+
         cat.jump(50);
+
+        Animal an1 = new Animal("Gaz2");
+        System.out.println(an1.getName());
+        an1.run(200);
+
 
         Dog dog = new Dog("Sous");
         System.out.println(dog.getName());
@@ -20,7 +25,9 @@ public class Main {
         Animal an = new Animal("Gaz");
         System.out.println(an.getName());
         an.run(200);
-        an.swim(500);
+
+
+//        System.out.println("test" + dog.(dog));
 
         System.out.printf("Всего создано животных: %s, из них собак: %s, кошек: %s %n", Animal.counter(), Dog.counter(), Cat.counter());
 

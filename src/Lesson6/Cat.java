@@ -1,6 +1,6 @@
 package Lesson6;
 
-public class Cat extends Animal {
+public class Cat extends NotWaterfowlAnimal {
     private static int numb;
     public Cat(String name) {
         this.setName(name);
@@ -18,11 +18,6 @@ public class Cat extends Animal {
         } else {
             System.out.println(String.format("%s не может пробежать %d м.", this.getName(), run));
         }
-    }
-
-    @Override
-    public void swim(int swim) {
-        System.out.println(String.format ("Кот %s не умеет плавать",this.getName()));
     }
 
     @Override

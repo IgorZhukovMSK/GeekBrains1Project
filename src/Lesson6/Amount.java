@@ -1,13 +1,24 @@
 package Lesson6;
 
-public class Amount{
-    protected static int numb;
+public class Amount {
+    private static int numb;
 
     public Amount() {
         numb++;
     }
 
     public static int counter() {
+
         return numb;
     }
 }
+
+        /*
+        Это выглядит очень странно public class Amount{ private static int numb;
+        Подумайте, зачем вы это сделали, поскольку статик к объекту не привязан
+
+        Я понял в чем вопрос, нужно каким то образом привязать метод к объекту, что бы объект обращаясь к этому методу производил расчет.
+        Сейчас у меня каждый объект считается независимо от этого класса. Кроме Анимал. Но если я убраю в классах кошка и собака подсчет,
+        то подсчет обращается к классу Amount, и тогда все в куче считается.
+
+        */
